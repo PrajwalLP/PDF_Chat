@@ -1,1 +1,3 @@
 Must Install streamlit , dotenv , PyPDF2 , langchain , openAI , FAISS . in the local pc.
+
+Then run using "streamlit run python.py" in terminal window 
