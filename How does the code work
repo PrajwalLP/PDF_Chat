@@ -1,0 +1,15 @@
+How it works 
+
+1) We load the PDF on the website 
+
+2) The Loaded PDF is then converted into Chunks 
+
+3) These Chunks are embedded 
+
+4) These Embedded Chunks are the Fed to the backend vector where it is stored
+
+5) User Query/Question is taken and checked 
+
+6) We get the similarity and then the answer is produced 
+
+7) The Chat History is also taken into account
