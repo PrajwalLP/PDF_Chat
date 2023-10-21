@@ -77,12 +77,16 @@ def main ():
         pdf_doc = st.file_uploader("Upload your PDF here and click on process")
         if st.button("process"):
             with st.spinner("Processing"):
+                #Getting text from PDF
                 text_raw = get_pdf_text(pdf_doc)
 
+                #Making small Chunks from the PDF
                 chunks = get_chunks(text_raw)
-                
+
+                #Feed the Chunks inot the Backend 
                 vectorstore = get_vectorstore(chunks)
 
+                #retain the History and Let the Bot converse throuh it 
                 st.session_state.converse = get_conversation(vectorstore)
 
 if __name__=='__main__':
